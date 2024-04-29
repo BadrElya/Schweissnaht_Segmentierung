@@ -1,0 +1,10 @@
+scikit-image==0.19.3
+scikit-learn==1.3.0
+IPython[all]
+imgaug==0.2.9
+keras==2.4.0
+opencv-python==4.5.4.60
+seaborn==0.12.2
+six==1.15.0
+absl-py==0.15.0
+tensorflow==2.4.0
