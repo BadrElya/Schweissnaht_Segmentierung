@@ -1,20 +1,20 @@
 # Instance Segmentation
 
-This repository contains various scripts and tools for training and evaluating instance segmentation models. Below is an overview of the repository structure and its contents.
+This repository contains various scripts and tools for training and evaluating semantic and instance segmentation models. Below is an overview of the repository structure and its contents.
 
 ## Repository Structure
 
 - **augmentedDataScripts/**: Contains Python scripts for augmenting training data.
 - **customDataScripts/**: Contains scripts for processing training data as desired.
 - **Mask-RCNN/**: Contains training and evaluation code, as well as scripts for running multiple tests sequentially.
-- **U-Net/**: Includes training and evaluation scripts, along with automated test execution scripts.
-- **YOLOv8/**: Features training and evaluation code, as well as scripts for sequential testing.
+- **U-Net/**: Includes training and evaluation scripts, as well as scripts for running multiple tests sequentially.
+- **YOLOv8/**: Includes training and evaluation code, as well as scripts for running multiple tests sequentially.
 - **Testdata/**: Contains the test datasets.
 - **Trainingsdata/**: Contains the training datasets.
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0. For more details, see the LICENSE tab.
+This project is licensed under the GNU General Public License v3.0.
 
 ## Usage
 

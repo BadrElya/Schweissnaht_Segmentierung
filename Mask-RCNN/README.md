@@ -1,3 +1,5 @@
+Copyright (c) 2017 Matterport, Inc.
+
 # Mask R-CNN using TensorFlow 2 - Instance Segmentation
 
 GitHub Repository: [Mask R-CNN TensorFlow Repository](https://github.com/AarohiSingla/Mask-R-CNN-using-Tensorflow2)
