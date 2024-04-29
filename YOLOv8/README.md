@@ -1,6 +1,6 @@
 # YOLOv8 using TensorFlow 2 - Instance Segmentation
 
-Licence: [Ultralytics] (https://github.com/ultralytics/ultralytics/blob/main/LICENSE)
+Licence: [Ultralytics](https://github.com/ultralytics/ultralytics/blob/main/LICENSE)
 
 Watch the video tutorial to understand the code and setup: [YOLOv8 Instance Segmentation Tutorial](https://www.youtube.com/watch?v=DMRlOWfRBKU)
 
