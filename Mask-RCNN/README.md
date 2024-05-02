@@ -18,15 +18,7 @@ Before using Mask R-CNN for instance segmentation, you need to set up the enviro
 2. Create a conda environment with Python 3.8.5 and install the required packages:
    ```
    conda create -n maskrcnn -y python=3.8.5 && conda activate maskrcnn && pip install --force-reinstall -r requirements.txt
-   ```
-   
-## Create validation data
-
-30% of the training data from the dataset/train folder will be moved to the dataset/validation folder
-
-   ```
-   python createValidationSet.py
-   ```
+   ```  
    
 ## Dataset Structure
 
@@ -53,9 +45,10 @@ Dataset/
 ├── labels.txt
 ```
 
-## Create validation dataset
+## Create validation data
 
-Execute the script `createValidationSet.py` to create a validation dataset:
+30% of the training data from the dataset/train folder will be moved to the dataset/validation folder
+
    ```
    python createValidationSet.py
    ```
