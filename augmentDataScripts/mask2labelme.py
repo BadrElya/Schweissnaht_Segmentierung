@@ -7,45 +7,47 @@ import json
 import argparse
 
 def main(dataset_dir, extension):
-    images = natsorted(glob.glob(os.path.join(dataset_dir, extension)))
+    for root, _, _ in os.walk(dataset_dir):
+        images = natsorted(glob.glob(os.path.join(root, extension)))
 
-    epsilon = 1
+        epsilon = 1
 
-    for i in range(len(images)):
-        name = images[i].strip(".png") + ".json"
-        labelme_data = {
-            "version": "4.5.10",
-            "flags": {},
-            "shapes": [],
-            "imagePath": os.path.basename(images[i]),
-            "imageData": None,
-            "imageHeight": 1248,
-            "imageWidth": 1248,
-        }
-
-        mask = cv2.imread(images[i])
-        mask = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
-        contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        for contour in contours:
-            if len(contour) < 3:
-                continue
-            polygon = cv2.approxPolyDP(contour, epsilon, True).squeeze().tolist()
-            labelme_shape = {
-                "label": "weld",
-                "points": polygon,
-                "group_id": None,
-                "shape_type": "polygon",
+        for i in range(len(images)):
+            name = os.path.basename(images[i]).strip(".png") + ".json"
+            labelme_data = {
+                "version": "4.5.10",
                 "flags": {},
+                "shapes": [],
+                "imagePath": os.path.basename(images[i]),
+                "imageData": None,
+                "imageHeight": 1248,
+                "imageWidth": 1248,
             }
-            labelme_data["shapes"].append(labelme_shape)
 
-        # Save LabelMe JSON file
-        with open(name, "w") as json_file:
-            json.dump(labelme_data, json_file, indent=2)
+            mask = cv2.imread(images[i])
+            mask = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
+            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        if i % 100 == 0:
-            print(i / len(images))
+            for contour in contours:
+                if len(contour) < 3:
+                    continue
+                polygon = cv2.approxPolyDP(contour, epsilon, True).squeeze().tolist()
+                labelme_shape = {
+                    "label": "weld",
+                    "points": polygon,
+                    "group_id": None,
+                    "shape_type": "polygon",
+                    "flags": {},
+                }
+                labelme_data["shapes"].append(labelme_shape)
+
+            # Save LabelMe JSON file in the same directory as the image
+            json_path = os.path.join(root, name)
+            with open(json_path, "w") as json_file:
+                json.dump(labelme_data, json_file, indent=2)
+
+            if i % 100 == 0:
+                print(i / len(images))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Convert image masks to LabelMe JSON files')

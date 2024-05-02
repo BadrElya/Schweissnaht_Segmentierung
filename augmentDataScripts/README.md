@@ -27,12 +27,10 @@ This Python script processes images and creates corresponding LabelMe JSON annot
 python mask2labelme.py "augmented_Masks\\1" "*.png"
 ```
 
-## 4. rename.py
+## 4. cpyAnnotationMasks2Images.py
 
-This script renames images and updates their corresponding JSON files, ensuring that the filenames in the JSON files match the renamed image filenames.
-
-**Note**: First copy JSON files from "augmented_Masks\\1" to "augmented_Images\\1"
+This script is designed to copy JSON files from a specified input folder to a designated output folder while preserving the directory structure.
 
 ```
-python rename.py "augmented_Images/1" "renamed_images"
+python cpyAnnotationMasks2Images.py "augmented_Masks" "augmented_Images"
 ```
