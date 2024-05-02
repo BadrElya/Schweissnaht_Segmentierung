@@ -63,7 +63,7 @@ Prepare your dataset and convert annotations by following these steps:
    python labelme2voc.py Dataset\train Dataset\train_voc --labels Dataset\labels.txt
    ```
 
-3. Run `voc_annotation.py` to generate annotation files.
+3. The script `voc_annotation.py` automates the creation of text files that list filenames, effectively organizing a dataset into training and validation data..
    ```
    python voc_annotation.py
    ```
