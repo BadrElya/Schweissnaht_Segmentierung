@@ -1,0 +1,4 @@
+train: C:/Users/bel/Documents/Schweissnaht_Segmentierung/YOLOv8/Dataset/train/
+val: C:/Users/bel/Documents/Schweissnaht_Segmentierung/YOLOv8/Dataset/val/
+nc: 1
+names: ['weld']

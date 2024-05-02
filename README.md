@@ -2,6 +2,20 @@
 
 This repository contains various scripts and tools for training and evaluating semantic and instance segmentation models. Below is an overview of the repository structure and its contents.
 
+## Entwicklungsumgebung
+
+Für dieses Projekt wurden die folgenden Versionen in der Anaconda-Umgebung verwendet:
+
+- conda version: 23.5.2
+- conda-build version: 3.25.0
+- python version: 3.11.3.final.0
+
+Zusätzlich wurden die folgenden virtuellen Pakete verwendet:
+
+- __archspec=1=x86_64
+- __cuda=12.2=0
+- __win=0=0
+
 ## Repository Structure
 
 - **augmentedDataScripts/**: Contains Python scripts for augmenting training data.
