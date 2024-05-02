@@ -1,3 +1,4 @@
+import argparse
 import tensorflow as tf
 from PIL import Image
 import numpy as np
@@ -23,7 +24,7 @@ def cvtColor(image):
         image = image.convert('RGB')
     return image
 
-def detect_image(image_path):
+def detect_image(image_path, model_path):
     image = Image.open(image_path)
     image = cvtColor(image)
     old_img = image.copy()
@@ -33,7 +34,6 @@ def detect_image(image_path):
     image_data = normalize(np.array(image_data, dtype=np.float32))
     image_data = np.expand_dims(image_data, 0)
 
-    model_path = 'unetmodel.h5'
     model = tf.keras.models.load_model(model_path)
 
     pr = model.predict(image_data)[0]
@@ -55,10 +55,13 @@ def detect_image(image_path):
 
     return final_image
 
-# Test the function
-test_image_path = '3.png'
-result_image = detect_image(test_image_path)
-plt.figure(figsize=(10, 10))
-plt.imshow(result_image)
-plt.axis('off')
-plt.show()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Image Detection')
+    parser.add_argument('--image_path', type=str, help='Path to the input image')
+    parser.add_argument('--model_path', type=str, help='Path to the model')
+    args = parser.parse_args()
+
+    if args.image_path and args.model_path:
+        detect_image(args.image_path, args.model_path)
+    else:
+        print("Please provide both --image_path and --model_path arguments.")

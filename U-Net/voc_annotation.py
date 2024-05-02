@@ -4,7 +4,7 @@ import glob
 
 TRAINVAL_PERCENT = 1
 TRAIN_PERCENT = 0.9
-DATASET_PATH = 'dataset/train_voc'
+DATASET_PATH = 'Dataset/train_voc'
 
 
 def get_file_names(dir, filter="*.png"):
