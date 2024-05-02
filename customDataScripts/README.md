@@ -10,7 +10,7 @@ python updateImageDataAndWidth.py input_folder 1248
 
 ## 2. padding_images.py
 
-This script takes a directory of image files, resizes them by adding black padding to the right side if needed, and saves the resized images back to their original file paths.
+This script takes a directory of image files, resizes them by adding zero padding to the right side if needed, and saves the resized images back to their original file paths.
 
 ```
 python padding_images.py input_folder 1248
