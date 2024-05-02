@@ -2,15 +2,15 @@
 
 This repository contains various scripts and tools for training and evaluating semantic and instance segmentation models. Below is an overview of the repository structure and its contents.
 
-## Entwicklungsumgebung
+## Development Environment
 
-Für dieses Projekt wurden die folgenden Versionen in der Anaconda-Umgebung verwendet:
+For this project, the following versions were used in the Anaconda environment:
 
 - conda version: 23.5.2
 - conda-build version: 3.25.0
 - python version: 3.11.3.final.0
 
-Zusätzlich wurden die folgenden virtuellen Pakete verwendet:
+Additionally, the following virtual packages were used:
 
 - __archspec=1=x86_64
 - __cuda=12.2=0
