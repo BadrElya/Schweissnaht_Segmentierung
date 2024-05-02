@@ -44,7 +44,7 @@ python correctpng2jpg.py input_folder
 
 ## 6. convert2png.py
 
-This script converts images to JPG format and saves the converted images in the specified output directory.
+This script converts images to PNG format and saves the converted images in the specified output directory.
 
 ```
 python convert2png.py input_folder converted_PNG_input_folder
