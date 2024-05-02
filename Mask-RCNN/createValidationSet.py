@@ -3,8 +3,8 @@ import shutil
 import random
 
 # Pfad zum ursprünglichen Trainingsordner und zum neuen Validierungsordner
-train_dir = 'dataset/train'
-validation_dir = 'dataset/validation'
+train_dir = 'Dataset/train'
+validation_dir = 'Dataset/validation'
 
 # Erstelle den Validierungsordner, falls er noch nicht existiert
 os.makedirs(validation_dir, exist_ok=True)
