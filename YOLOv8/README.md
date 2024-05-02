@@ -12,7 +12,7 @@ Before using YOLOv8 for instance segmentation, make sure to create and set up th
 
 1. Navigate to the YOLOv8 directory:
    ```
-   cd Path_To\Instance_Segmentation\YOLOv8
+   cd Path_To\Schweissnaht_Segmentierung\YOLOv8
    ```
 
 2. Create a conda environment with Python 3.10 and install the required packages from `requirements.txt`: 
